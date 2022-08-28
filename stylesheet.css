@@ -1,0 +1,83 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+button span{
+    border-radius: 10px;
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+}
+.orange-text{
+    color: #ED1D25;
+}
+#sticky{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+a{
+    padding: 4px;
+    border-radius: 10px;
+}
+a:hover{
+    transition: all 0.2s ease;
+    background-color: #ED1D25;
+    
+}
+#nav-menu{
+
+    position: relative;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+}
+
+#nav-menu.active{
+    left: 0%;
+}
+
+.orange{
+    background-color: #ED1D25;
+}
+
+#rb{
+    position: relative;
+  width: 650px;
+height: 50px;
+    border-radius: 10px;
+    border:1px black solid;
+    overflow: hidden;
+}
+#rb::before{
+    position: absolute;
+left: -25%;
+top: -950%;
+    height: 2000%;
+    width: 150%;
+    content: "";
+    background: conic-gradient(
+        red,orange,yellow,green,blue,purple
+        
+    );
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+100%{
+    transform: rotate(-360deg);
+}
+}
+#rb::after{
+    display: grid;
+    place-items: center;
+    height: 90%;
+    width: 98%;
+    position: absolute;
+    border: rgb(201, 201, 201);
+right: 1%;
+top: 5%;
+    border-radius: 5px;
+    content: "Reflection Of Your Imagination!";
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+   letter-spacing: 5px;}

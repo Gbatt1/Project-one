@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+
+</head>
+<body class="bg-gray-100">
+
+<div id="app">
+<div id="sticky">
+
+    <nav class="flex justify-between bg-blue-900 items-center flex-wrap px-10 py-2 lg:w-full ">
+        <div class="" >
+            
+            <img src="img/logo-light.png" alt="" class="mx-auto w-40 h-full">
+            
+            
+            
+            
+        </div>
+        <button class="space-y-2 block lg:hidden" @click="toggle()">
+            <span> </span>
+            <span> </span>
+            <span> </span>
+        </button>
+        
+        <ul id="navi" class="lg:flex bg-blue-900 hidden space-x-10 text-center  text-white ">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Contact</a></li>   
+        </ul>
+   
+    </nav>
+    
+<ul id="nav-menu" :class="{active:isactive}" class="flex shadow bg-blue-900 small space-y-2 pb-2 font-bold flex-col text-center  text-white w-full lg:hidden">
+    <li><a @click="toggle()" href="#">Home</a></li>
+    <li><a @click="toggle()" href="#">Services</a></li>
+    <li><a @click="toggle()" href="#">Features</a></li>
+    <li><a @click="toggle()" href="#">About</a></li>
+    <li><a @click="toggle()" href="#">Clients</a></li>
+    <li><a @click="toggle()" href="#">Contact</a></li>   
+</ul>
+
+</div>
+
+<div class="lg:flex justify-center py-20 bg-gray-100 mx-6">
+   
+   <div class="flex flex-col justify-center items-center lg:w-4/12 ">
+
+       <div id="rb" class="mb-4">
+           
+    </div>
+    <h1 class="text-4xl font-bold mb-10">No limit exists, it is simply a matter of creating from your imagination </h1>
+    <span class="text-gray-700">A Creative Studio that uses the best technologies to provide for the business market needs. </span>
+    <button class="mt-8 orange text-white font-bold px-4 py-2 rounded shadow">Contact us!</button>
+</div>
+<img class="mx-auto lg:mx-0" src="img/undraw_Engineering_team_a7n2-removebg-preview.png" alt="">
+
+
+</div>
+<div class="bg-blue-900 h-full flex flex-col items-center justify-center pt-10">
+
+    <div class="bg-red-100 orange-text font-bold text-center lg:w-1/12 w-4/12 py-2 rounded-lg ">
+        <span >Best Services</span>
+    </div>
+    
+    <h1 class="text-white lg:text-4xl text-xl mt-10">Excellent service coupled with our experience</h1>
+</div>
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+
+let app = new Vue({
+
+    el:'#app',
+    data:{
+isactive: false,
+
+
+    },
+    methods:{
+
+toggle(){
+    if(this.isactive) this.isactive = false
+    else this.isactive = true
+}
+
+    },
+})
+
+
+    </script>
+</body>
+</html>
